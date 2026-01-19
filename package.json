@@ -1,0 +1,14 @@
+{
+  "name": "oldagram",
+  "description": "a mini social media app where selfie portraits are rendered",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
