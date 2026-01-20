@@ -4,10 +4,18 @@ body {
   padding: 0;
 }
 
-.container {
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #000000;
+
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  width: 375px;
 }
 
 header {
@@ -16,7 +24,6 @@ header {
   align-items: center;
   padding: 16px;
 
-  width: 375px;
   border-bottom: 1px solid #c6c6c6;
 }
 
@@ -26,7 +33,35 @@ header {
 
 .golden-avatar {
   width: 40px;
-  height: 40px;
 
   border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  gap: 7px;
+}
+
+.profile-img {
+  width: 34px;
+  border-radius: 50%;
+}
+
+.user-full-name {
+  font-size: 13px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.user-location {
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.post-img {
+  width: 100%;
 }
