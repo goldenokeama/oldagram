@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
@@ -23,7 +29,7 @@
       </header>
 
       <main>
-        <section>
+        <section class="post-content">
           <div class="profile">
             <img
               class="profile-img"
@@ -36,11 +42,42 @@
               <p class="user-location">Zudert, Netherlands</p>
             </div>
           </div>
+
           <img
             src="images/post-vangogh.jpg"
             alt="a painted selfie of vincent van gogh"
             class="post-img"
           />
+
+          <div class="post-body">
+            <div class="icons">
+              <img
+                src="images/icon-heart.png"
+                alt="a heart shaped icon, used for liking the post"
+                class="like-icon"
+                id="like-icon"
+              />
+
+              <img
+                src="images/icon-comment.png"
+                alt="a comment icon, used for commenting on the post"
+                class="comment-icon"
+              />
+              <img
+                src="images/icon-dm.png"
+                alt="a share icon, used for sharing the post"
+                class="share-icon"
+              />
+            </div>
+
+            <p class="like-count" id="like-count">
+              <span id="number-of-likes">21,492</span> likes
+            </p>
+
+            <p class="username-caption">
+              <strong>vincey1853</strong> just took a few mushrooms lol
+            </p>
+          </div>
         </section>
       </main>
     </div>
