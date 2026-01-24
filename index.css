@@ -29,6 +29,10 @@ header {
   border-bottom: 1px solid #c6c6c6;
 }
 
+section {
+  border-bottom: 5px solid whitesmoke;
+}
+
 .logo {
   width: 127px;
 }
