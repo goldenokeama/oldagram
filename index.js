@@ -1,6 +1,6 @@
 const mainElement = document.getElementById("main");
 
-const posts = [
+let posts = [
   {
     name: "Vincent van Gogh",
     username: "vincey1853",
@@ -39,59 +39,88 @@ function renderPosts() {
 
     postsHTML += `
         <section class="post-content">
-          <div class="profile">
+            <div class="profile">
+                <img
+                    class="profile-img"
+                    src="${avatar}"
+                    alt="an avatar of ${name}"
+                 />
+    
+                <div>
+                    <h1 class="user-full-name">${name}</h1>
+                    <p class="user-location">${location}</p>
+                </div>
+            </div>
+          
             <img
-              class="profile-img"
-              src="${avatar}"
-              alt="an avatar of ${name}"
+                src="${post}"
+                alt="a painted selfie of ${name}"
+                class="post-img"
+                id="post-img-${i}"
             />
+          
+            <div class="post-body">
+                <div class="icons">
+                    <img
+                        src="images/icon-heart.png"
+                        alt="a heart shaped icon, used for liking the post"
+                        class="like-icon"
+                        id="like-icon-${i}"
+                    />
+              
+                    <img
+                        src="images/icon-comment.png"
+                        alt="a comment icon, used for commenting on the post"
+                        class="comment-icon"
+                    />
 
-            <div>
-              <h1 class="user-full-name">${name}</h1>
-              <p class="user-location">${location}</p>
+                    <img
+                        src="images/icon-dm.png"
+                        alt="a share icon, used for sharing the post"
+                        class="share-icon"
+                    />
+
+                </div>
+                
+                <p class="like-count" id="like-count">
+                    <span id="number-of-likes-${i}">${likes}</span> likes
+                </p>
+                
+                <p class="username-caption">
+                    <strong>${username}</strong> ${comment}
+                </p>
             </div>
-          </div>
-
-          <img
-            src="${post}"
-            alt="a painted selfie of ${name}"
-            class="post-img"
-          />
-
-          <div class="post-body">
-            <div class="icons">
-              <img
-                src="images/icon-heart.png"
-                alt="a heart shaped icon, used for liking the post"
-                class="like-icon"
-                id="like-icon"
-              />
-
-              <img
-                src="images/icon-comment.png"
-                alt="a comment icon, used for commenting on the post"
-                class="comment-icon"
-              />
-              <img
-                src="images/icon-dm.png"
-                alt="a share icon, used for sharing the post"
-                class="share-icon"
-              />
-            </div>
-
-            <p class="like-count" id="like-count">
-              <span id="number-of-likes">${likes}</span> likes
-            </p>
-
-            <p class="username-caption">
-              <strong>${username}</strong> ${comment}
-            </p>
-          </div>
         </section>
-        `;
+    `;
   }
 
   mainElement.innerHTML = postsHTML;
 }
 
 renderPosts();
+
+const firstPostImg = document.getElementById("post-img-0");
+const secondPostImg = document.getElementById("post-img-1");
+const thirdPostImg = document.getElementById("post-img-2");
+
+firstPostImg.addEventListener("dblclick", handleDoubleClick);
+secondPostImg.addEventListener("dblclick", handleDoubleClick);
+thirdPostImg.addEventListener("dblclick", handleDoubleClick);
+
+function handleDoubleClick(event) {
+  const postId = getIdOfDoubleClickedPost(event);
+
+  const doubleClickedPostLikesElement = document.getElementById(
+    `number-of-likes-${postId}`
+  );
+
+  const likes = Number(doubleClickedPostLikesElement.innerText);
+
+  doubleClickedPostLikesElement.innerText = likes + 1;
+}
+
+function getIdOfDoubleClickedPost(event) {
+  const { target } = event;
+  // e.g target.id = post-img-0
+  return Number(target.id.split("-").pop());
+}
