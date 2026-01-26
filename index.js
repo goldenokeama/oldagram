@@ -1,6 +1,6 @@
 const mainElement = document.getElementById("main");
 
-const posts = [
+let posts = [
   {
     name: "Vincent van Gogh",
     username: "vincey1853",
@@ -67,6 +67,12 @@ function renderPosts() {
                         class="like-icon"
                         id="like-icon-${i}"
                     />
+                    <img
+                        src="images/icon-heart-filled.png"
+                        alt="a heart shaped icon, used for liking the post"
+                        class="like-icon filled"
+                        id="like-icon-filled-${i}"
+                    />
               
                     <img
                         src="images/icon-comment.png"
@@ -107,6 +113,14 @@ const firstPostLike = document.getElementById("like-icon-0");
 const secondPostLike = document.getElementById("like-icon-1");
 const thirdPostLike = document.getElementById("like-icon-2");
 
+const firstPostLikeFilled = document.getElementById("like-icon-filled-0");
+const secondPostLikeFilled = document.getElementById("like-icon-filled-1");
+const thirdPostLikeFilled = document.getElementById("like-icon-filled-2");
+
+firstPostLikeFilled.style.display = "none";
+secondPostLikeFilled.style.display = "none";
+thirdPostLikeFilled.style.display = "none";
+
 firstPostImg.addEventListener("dblclick", handleClick);
 secondPostImg.addEventListener("dblclick", handleClick);
 thirdPostImg.addEventListener("dblclick", handleClick);
@@ -114,6 +128,10 @@ thirdPostImg.addEventListener("dblclick", handleClick);
 firstPostLike.addEventListener("click", handleClick);
 secondPostLike.addEventListener("click", handleClick);
 thirdPostLike.addEventListener("click", handleClick);
+
+firstPostLikeFilled.addEventListener("click", handleClick);
+secondPostLikeFilled.addEventListener("click", handleClick);
+thirdPostLikeFilled.addEventListener("click", handleClick);
 
 function handleClick(event) {
   const postId = getIdOfDoubleClickedPost(event);
@@ -125,6 +143,14 @@ function handleClick(event) {
   const likes = Number(doubleClickedPostLikesElement.innerText);
 
   doubleClickedPostLikesElement.innerText = likes + 1;
+
+  hideTheClickedPostHeartIcon(postId);
+}
+
+function hideTheClickedPostHeartIcon(postId) {
+  document.getElementById(`like-icon-${postId}`).style.display = "none";
+  document.getElementById(`like-icon-filled-${postId}`).style.display =
+    "inline";
 }
 
 function getIdOfDoubleClickedPost(event) {

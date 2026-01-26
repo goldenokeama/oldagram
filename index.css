@@ -92,6 +92,10 @@ section {
   opacity: 0.5;
 }
 
+.like-icon.filled:hover {
+  opacity: 0.7;
+}
+
 .comment-icon {
   width: 24px;
 }
