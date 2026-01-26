@@ -1,6 +1,6 @@
 const mainElement = document.getElementById("main");
 
-let posts = [
+const posts = [
   {
     name: "Vincent van Gogh",
     username: "vincey1853",
@@ -103,11 +103,19 @@ const firstPostImg = document.getElementById("post-img-0");
 const secondPostImg = document.getElementById("post-img-1");
 const thirdPostImg = document.getElementById("post-img-2");
 
-firstPostImg.addEventListener("dblclick", handleDoubleClick);
-secondPostImg.addEventListener("dblclick", handleDoubleClick);
-thirdPostImg.addEventListener("dblclick", handleDoubleClick);
+const firstPostLike = document.getElementById("like-icon-0");
+const secondPostLike = document.getElementById("like-icon-1");
+const thirdPostLike = document.getElementById("like-icon-2");
 
-function handleDoubleClick(event) {
+firstPostImg.addEventListener("dblclick", handleClick);
+secondPostImg.addEventListener("dblclick", handleClick);
+thirdPostImg.addEventListener("dblclick", handleClick);
+
+firstPostLike.addEventListener("click", handleClick);
+secondPostLike.addEventListener("click", handleClick);
+thirdPostLike.addEventListener("click", handleClick);
+
+function handleClick(event) {
   const postId = getIdOfDoubleClickedPost(event);
 
   const doubleClickedPostLikesElement = document.getElementById(
