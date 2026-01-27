@@ -5,8 +5,8 @@ let posts = [
     name: "Vincent van Gogh",
     username: "vincey1853",
     location: "Zundert, Netherlands",
-    avatar: "images/avatar-vangogh.jpg",
-    post: "images/post-vangogh.jpg",
+    avatar: "./images/avatar-vangogh.jpg",
+    post: "./images/post-vangogh.jpg",
     comment: "just took a few mushrooms lol",
     likes: 21,
   },
@@ -14,8 +14,8 @@ let posts = [
     name: "Gustave Courbet",
     username: "gus1819",
     location: "Ornans, France",
-    avatar: "images/avatar-courbet.jpg",
-    post: "images/post-courbet.jpg",
+    avatar: "./images/avatar-courbet.jpg",
+    post: "./images/post-courbet.jpg",
     comment: "i'm feelin a bit stressed tbh",
     likes: 4,
   },
@@ -23,8 +23,8 @@ let posts = [
     name: "Joseph Ducreux",
     username: "jd1735",
     location: "Paris, France",
-    avatar: "images/avatar-ducreux.jpg",
-    post: "images/post-ducreux.jpg",
+    avatar: "./images/avatar-ducreux.jpg",
+    post: "./images/post-ducreux.jpg",
     comment:
       "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
     likes: 152,
@@ -62,26 +62,26 @@ function renderPosts() {
             <div class="post-body">
                 <div class="icons">
                     <img
-                        src="images/icon-heart.png"
+                        src="./images/icon-heart.png"
                         alt="a heart shaped icon, used for liking the post"
                         class="like-icon"
                         id="like-icon-${i}"
                     />
                     <img
-                        src="images/icon-heart-filled.png"
+                        src="./images/icon-heart-filled.png"
                         alt="a heart shaped icon, used for liking the post"
                         class="like-icon filled"
                         id="like-icon-filled-${i}"
                     />
               
                     <img
-                        src="images/icon-comment.png"
+                        src="./images/icon-comment.png"
                         alt="a comment icon, used for commenting on the post"
                         class="comment-icon"
                     />
 
                     <img
-                        src="images/icon-dm.png"
+                        src="./images/icon-dm.png"
                         alt="a share icon, used for sharing the post"
                         class="share-icon"
                     />
