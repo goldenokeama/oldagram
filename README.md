@@ -9,7 +9,13 @@ This project was built to practice **JavaScript DOM manipulation**, **event hand
 
 ## 🔗 Live Demo
 
-🔗 **Live Site:** https://golden-oldagram.netlify.app/
+[**Try the Oldagram App here**](https://golden-oldagram.netlify.app/)
+
+---
+
+## 📸 Screenshot
+
+<img src="oldagram-screenshot.png" alt="Oldagram app screenshot" width="1200" />
 
 ---
 
