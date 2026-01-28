@@ -7,6 +7,12 @@ This project was built to practice **JavaScript DOM manipulation**, **event hand
 
 ---
 
+## 🔗 Live Demo
+
+🔗 **Live Site:** https://golden-oldagram.netlify.app/
+
+---
+
 ## 📖 About the Project
 
 Oldagram displays a list of posts generated from JavaScript data objects.  
